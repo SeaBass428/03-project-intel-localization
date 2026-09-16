@@ -16,6 +16,23 @@ function updatePageDirection() {
 
 updatePageDirection();
 
+const timelineModal = document.getElementById("timelineModal");
+const timelineModalDetails = document.getElementById("timelineModalDetails");
+
+timelineModal.addEventListener("show.bs.modal", function (event) {
+  const timelineCard = event.relatedTarget.closest("#timeline > div");
+  const cardTitle = timelineCard.querySelector("h3").textContent;
+  const cardYear = timelineCard.querySelector("h2").textContent;
+  const cardImage = timelineCard.querySelector("img");
+  const cardDescription = timelineCard.querySelector("p").textContent.trim();
+
+  document.getElementById("timelineModalLabel").textContent = `${cardYear}: ${cardTitle}`;
+  document.getElementById("timelineModalImage").src = cardImage.src;
+  document.getElementById("timelineModalImage").alt = cardImage.alt;
+  document.getElementById("timelineModalDescription").textContent = cardDescription;
+  timelineModalDetails.textContent = timelineCard.dataset.details;
+});
+
 // Google Translate can change the html lang attribute after the page loads.
 const languageObserver = new MutationObserver(updatePageDirection);
 languageObserver.observe(document.documentElement, {

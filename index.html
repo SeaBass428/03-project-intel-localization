@@ -43,6 +43,9 @@
         NM Electronics to Intel Corporation, laying the foundation for 
         decades of technological innovation.
       </p>
+      <button type="button" class="btn btn-primary timeline-modal-button" data-bs-toggle="modal" data-bs-target="#timelineModal">
+        View details
+      </button>
     </div>
 
     <!-- Card 2: 1971 -->
@@ -55,6 +58,9 @@
         igniting the microprocessor revolution and propelling the future 
         of computing devices.
       </p>
+      <button type="button" class="btn btn-primary timeline-modal-button" data-bs-toggle="modal" data-bs-target="#timelineModal">
+        View details
+      </button>
     </div>
 
     <!-- Card 3: 1978 -->
@@ -66,6 +72,9 @@
         Launch of the 8086 processor, establishing the x86 architecture 
         that drives countless PCs and servers in the modern era.
       </p>
+      <button type="button" class="btn btn-primary timeline-modal-button" data-bs-toggle="modal" data-bs-target="#timelineModal">
+        View details
+      </button>
     </div>
 
     <!-- Card 4: 1985 -->
@@ -78,6 +87,9 @@
         ushering in a new era of performance and multitasking for 
         personal computers.
       </p>
+      <button type="button" class="btn btn-primary timeline-modal-button" data-bs-toggle="modal" data-bs-target="#timelineModal">
+        View details
+      </button>
     </div>
 
     <!-- Card 5: 2006 -->
@@ -91,6 +103,9 @@
         chemical abatement, renewable energy, and energy-efficient 
         manufacturing to reverse this trend.
       </p>
+      <button type="button" class="btn btn-primary timeline-modal-button" data-bs-toggle="modal" data-bs-target="#timelineModal">
+        View details
+      </button>
     </div>
 
     <!-- Card 6: 2020 -->
@@ -103,6 +118,9 @@
         Enabling) strategy and 2030 goals, aiming to drive industry-wide 
         progress on climate action, water stewardship, and waste reduction.
       </p>
+      <button type="button" class="btn btn-primary timeline-modal-button" data-bs-toggle="modal" data-bs-target="#timelineModal">
+        View details
+      </button>
     </div>
 
     <!-- Card 7: 2022 -->
@@ -115,6 +133,9 @@
         gas emissions (Scope 1 and 2) across its global operations 
         by 2040, building on years of environmental initiatives.
       </p>
+      <button type="button" class="btn btn-primary timeline-modal-button" data-bs-toggle="modal" data-bs-target="#timelineModal">
+        View details
+      </button>
     </div>
 
     <!-- Card 8: 2023 -->
@@ -127,6 +148,9 @@
         helping to drastically lower carbon emissions and driving progress 
         toward Intel's long-term sustainability goals.
       </p>
+      <button type="button" class="btn btn-primary timeline-modal-button" data-bs-toggle="modal" data-bs-target="#timelineModal">
+        View details
+      </button>
     </div>
 
     <!-- Card 9: 2024 -->
@@ -139,8 +163,27 @@
         government officials, and industry leaders to collaborate on 
         next-generation sustainable semiconductor manufacturing.
       </p>
+      <button type="button" class="btn btn-primary timeline-modal-button" data-bs-toggle="modal" data-bs-target="#timelineModal">
+        View details
+      </button>
     </div>
   </section>
+
+  <!-- Reusable modal for timeline card details -->
+  <div class="modal fade" id="timelineModal" tabindex="-1" aria-labelledby="timelineModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h4" id="timelineModalLabel">Timeline details</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img id="timelineModalImage" class="img-fluid mb-3" src="" alt="" />
+          <p id="timelineModalDescription"></p>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <!-- 3-Column Content Section -->
   <section class="content-section">
@@ -209,6 +252,7 @@
     <p>© 2026 Intel Sustainability Timeline</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   <script src="script.js"></script>
 </body>
 </html>
