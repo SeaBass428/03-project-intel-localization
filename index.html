@@ -141,6 +141,14 @@
       </p>
     </div>
   </section>
+  <div class="timeline-controls" aria-label="Timeline controls">
+    <button type="button" id="previous-card" aria-label="View previous timeline card">
+      Previous
+    </button>
+    <button type="button" id="next-card" aria-label="View next timeline card">
+      Next
+    </button>
+  </div>
   <p>Scroll to view timeline | Hover over cards to learn more!</p>
 
     <!-- 3-Column Content Section -->
@@ -193,5 +201,33 @@
     <h2>Subscribe to our Newsletter</h2>
     <!-- Add form here -->
   </section>
+
+  <script>
+    const timeline = document.querySelector("#timeline");
+    const cards = document.querySelectorAll("#timeline > div");
+    const previousButton = document.querySelector("#previous-card");
+    const nextButton = document.querySelector("#next-card");
+
+    function updateButtons() {
+      previousButton.disabled = timeline.scrollLeft <= 0;
+      nextButton.disabled = timeline.scrollLeft + timeline.clientWidth >= timeline.scrollWidth - 1;
+    }
+
+    function moveTimeline(direction) {
+      const cardWidth = cards[0].offsetWidth;
+      const gap = 24;
+
+      timeline.scrollBy({
+        left: direction * (cardWidth + gap),
+        behavior: "smooth"
+      });
+    }
+
+    previousButton.addEventListener("click", () => moveTimeline(-1));
+    nextButton.addEventListener("click", () => moveTimeline(1));
+    timeline.addEventListener("scroll", updateButtons);
+    window.addEventListener("resize", updateButtons);
+    updateButtons();
+  </script>
 </body>
 </html>
