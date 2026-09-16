@@ -228,3 +228,8 @@ body > p {
   }
 
 }
+
+/* Keep the timeline flowing from right to left for translated RTL content. */
+html[dir="rtl"] #timeline {
+	direction: rtl;
+}
