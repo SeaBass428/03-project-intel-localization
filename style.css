@@ -8,6 +8,14 @@ html {
 	/* Snap the page vertically as the viewer moves between sections. */
 	scroll-snap-type: y proximity;
   scroll-padding-top: 10px;
+
+.subscription-box {
+	width: 100%;
+	padding: 40px;
+	background: #ffffff;
+	border: 4px solid #0071c5;
+	box-shadow: 0 8px 18px rgba(8, 17, 31, 0.12);
+}
 }
 
 body {
@@ -186,6 +194,48 @@ body > p {
 	color: #dce7f4;
 	background: #08111f;
 	text-align: center;
+}
+
+.site-footer {
+	padding: 32px 8% 40px;
+	color: #dce7f4;
+	background: #08111f;
+	text-align: center;
+}
+
+.footer-nav {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 20px;
+	margin-bottom: 12px;
+}
+
+.footer-nav a {
+	color: #f5c242;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus {
+	color: #ffffff;
+}
+
+.site-footer p {
+	margin: 0;
+	color: #dce7f4;
+}
+
+.content-section > div > div {
+	padding: 24px;
+}
+
+.subscription-section {
+  padding: 0 8% 80px;
+  color: #17243a;
+  background: #f4f7fb;
+  scroll-snap-align: start;
 }
 
 @media (max-width: 700px) {

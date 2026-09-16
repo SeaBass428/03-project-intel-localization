@@ -145,9 +145,8 @@
   <p>Scroll to view timeline | Hover over cards to learn more!</p>
 
     <!-- 3-Column Content Section -->
-  <section>
+  <section class="content-section">
     <div>
-      
       <!-- Column 1 -->
       <div>
         <h2>RISE Strategy</h2>
@@ -190,10 +189,27 @@
   </section>
 
   <!-- Subscription Form -->
-  <section>
-    <h2>Subscribe to our Newsletter</h2>
-    <!-- Add form here -->
+  <section class="subscription-section">
+    <div class="subscription-box">
+      <h2>Subscribe to our Newsletter</h2>
+      <form>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
   </section>
+
+  <footer class="site-footer">
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Contact</a>
+    </nav>
+    <p>© 2026 Intel Sustainability Timeline</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
