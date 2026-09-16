@@ -142,10 +142,17 @@ section > div img {
 }
 
 #timeline > div {
-	flex: 0 0 500px;
+  flex: 0 0 500px;
   max-width: none;
-	margin: 0;
-	scroll-snap-align: center;
+  margin: 0;
+  scroll-snap-align: center;
+  text-align: center;
+}
+
+#timeline > div h2,
+#timeline > div h3,
+#timeline > div p {
+  text-align: center;
 }
 
 #timeline > div p {
